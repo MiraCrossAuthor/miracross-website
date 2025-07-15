@@ -94,13 +94,11 @@
                     <h3 class="font-lora text-3xl font-bold text-slate-900 mb-2">Join the Inner Circle</h3>
                     <p class="text-slate-600 mb-8">Be the first to hear about new releases, exclusive content, and behind-the-scenes updates. No spam, ever.</p>
                     
-                    <!-- This form submits to a hidden iframe to prevent the page from reloading. -->
+                    <!-- This form is now handled by the JavaScript below -->
                     <form 
                         id="signup-form"
                         action="https://docs.google.com/forms/d/e/1FAIpQLScvi0IZz7o_YXOoAJsmnEa0AMj34ooSlsMV-pIPJsEqUGAdPw/formResponse"
-                        method="POST" 
-                        target="hidden_iframe" 
-                        onsubmit="submitted=true;"
+                        method="POST"
                     >
                         <div class="flex flex-col sm:flex-row gap-4">
                             <!-- Name Field -->
@@ -148,12 +146,36 @@
 
     </div>
 
-    <!-- Script to handle form submission state. Placed before the iframe to ensure 'submitted' is defined. -->
+    <!-- JavaScript to handle form submission asynchronously -->
     <script>
-        var submitted = false;
+        const signupForm = document.getElementById('signup-form');
+
+        signupForm.addEventListener('submit', (e) => {
+            // Prevent the default form submission behavior
+            e.preventDefault();
+
+            // Get the form data
+            const formData = new FormData(signupForm);
+            const url = signupForm.action;
+
+            // Send the data to Google Forms in the background
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Important to prevent CORS errors
+            })
+            .then(() => {
+                // On success, show the confirmation message
+                document.getElementById('signup-content').style.display = 'none';
+                document.getElementById('success-message').classList.remove('hidden');
+            })
+            .catch((error) => {
+                // Log any network errors to the console for debugging
+                console.error('Error submitting form:', error);
+                // Optionally, you could show an error message to the user here
+            });
+        });
     </script>
-    <!-- Hidden iframe for form submission -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('signup-content').style.display = 'none'; document.getElementById('success-message').classList.remove('hidden'); }"></iframe>
 
 </body>
 </html>

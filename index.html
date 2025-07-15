@@ -23,19 +23,19 @@
     .fade-in-section { animation: fadeIn 0.8s ease-out forwards; }
   </style>
 </head>
-<body class="bg-gray-50 text-slate-800 antialiased">
-  <div class="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8">
+<body class="bg-gradient-to-b from-sky-50 via-white to-white text-slate-800 antialiased">
+  <div class="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-4">
 
     <!-- Header -->
-    <header class="text-center my-6 md:my-10 fade-in-section">
-      <h1 class="font-lora text-5xl md:text-6xl font-bold text-gray-800">Mira Cross</h1>
-      <h2 class="mt-3 text-lg md:text-xl text-gray-500 font-light italic">
+    <header class="text-center pt-2 pb-2 fade-in-section">
+      <h1 class="font-lora text-5xl md:text-6xl font-bold text-gray-800 tracking-tight">Mira Cross</h1>
+      <h2 class="mt-1 text-lg md:text-xl text-gray-500 font-light italic tracking-wide">
         Where code is the weapon and reality is the target.
       </h2>
     </header>
 
     <!-- Social Links -->
-    <section class="flex justify-center items-center space-x-8 mb-6 fade-in-section" style="animation-delay: 100ms;">
+    <section class="flex justify-center items-center space-x-6 mb-4 fade-in-section" style="animation-delay: 100ms;">
       <!-- Instagram -->
       <a href="https://www.instagram.com/authormiracross" title="Instagram" class="text-gray-400 hover:text-pink-600 hover:scale-110 transition-transform">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -47,43 +47,43 @@
     </section>
 
     <!-- About -->
-    <section class="text-center max-w-2xl mx-auto mb-6 fade-in-section" style="animation-delay: 200ms;">
-      <p class="text-lg text-gray-600 leading-relaxed">
+    <section class="text-center max-w-2xl mx-auto mb-3 fade-in-section" style="animation-delay: 200ms;">
+      <p class="text-base text-gray-600 leading-relaxed">
         Mira Cross writes speculative thrillers about the blurred line between machine logic and human instinct. <em>Ghost in the Algorithm</em> is her debut novel.
       </p>
     </section>
 
     <!-- Mailing List Signup -->
-    <section id="mailing-list" class="bg-white my-6 py-6 px-4 rounded-2xl shadow-md ring-1 ring-gray-200 fade-in-section" style="animation-delay: 200ms;">
+    <section id="mailing-list" class="bg-sky-50 my-4 py-3 px-4 rounded-xl shadow-md ring-1 ring-gray-200 fade-in-section" style="animation-delay: 200ms;">
       <div class="max-w-xl mx-auto text-center">
         <div id="signup-content">
-          <h3 class="font-lora text-2xl font-bold text-gray-800 mb-1">Join the Inner Circle</h3>
-          <p class="text-gray-500 mb-4 text-sm">Be the first to hear about new releases, exclusive content, and behind-the-scenes updates.</p>
+          <h3 class="font-lora text-xl font-bold text-gray-800 mb-1 tracking-tight">Join the Inner Circle</h3>
+          <p class="text-gray-500 mb-2 text-sm">Be the first to hear about new releases, exclusive content, and behind-the-scenes updates.</p>
           <form id="signup-form">
             <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
-              <input id="name-input" type="text" name="entry.747036290" placeholder="Your Name" required class="flex-grow p-2 sm:p-3 text-sm rounded-md border border-gray-300 focus:ring-2 focus:ring-sky-500 w-full" />
-              <input id="email-input" type="email" name="entry.4090153" placeholder="Your Email Address" required class="flex-grow p-2 sm:p-3 text-sm rounded-md border border-gray-300 focus:ring-2 focus:ring-sky-500 w-full" />
-              <button id="submit-button" type="submit" class="bg-sky-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 text-sm rounded-md hover:bg-sky-700 transition-all shadow hover:shadow-md transform hover:-translate-y-0.5 disabled:bg-slate-400">Subscribe</button>
+              <input id="name-input" type="text" name="entry.747036290" placeholder="Your Name" required class="flex-grow p-2 text-sm rounded-md border border-gray-300 focus:ring-2 focus:ring-sky-500 w-full" />
+              <input id="email-input" type="email" name="entry.4090153" placeholder="Your Email Address" required class="flex-grow p-2 text-sm rounded-md border border-gray-300 focus:ring-2 focus:ring-sky-500 w-full" />
+              <button id="submit-button" type="submit" class="bg-sky-600 text-white font-bold py-2 px-4 text-sm rounded-md hover:bg-sky-700 transition-all shadow hover:shadow-md transform hover:-translate-y-0.5 disabled:bg-slate-400">✉️ Subscribe</button>
             </div>
           </form>
         </div>
-        <div id="success-message" class="hidden mt-4">
-          <h3 class="font-lora text-2xl font-bold text-green-600 mb-1">Thank You!</h3>
+        <div id="success-message" class="hidden mt-3">
+          <h3 class="font-lora text-xl font-bold text-green-600 mb-1">Thank You!</h3>
           <p class="text-slate-600 text-sm">You've been added to the list. Check your inbox soon.</p>
         </div>
       </div>
     </section>
 
     <!-- Featured Book -->
-    <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl ring-1 ring-gray-900/5 fade-in-section" style="animation-delay: 300ms;">
+    <section class="bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-xl ring-1 ring-gray-200 fade-in-section" style="animation-delay: 300ms;">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         <div class="md:col-span-1">
           <img src="og-cover.png" alt="Ghost in the Algorithm Book Cover" class="w-full h-auto rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x900/cccccc/ffffff?text=Image+Not+Found';" />
         </div>
         <div class="md:col-span-2">
           <h3 class="font-lora text-3xl font-bold text-gray-800 mb-1">Coming Soon: <em class="font-italic">Ghost in the Algorithm</em></h3>
-          <p class="text-lg font-semibold text-sky-600 mb-4">The Path controls the future. And she's not in it.</p>
-          <div class="space-y-3 text-gray-600 leading-relaxed">
+          <p class="text-lg font-semibold text-sky-600 mb-3 tracking-wide drop-shadow-sm">The Path controls the future. And she's not in it.</p>
+          <div class="space-y-2 text-gray-600 leading-relaxed text-base">
             <p>Someone has stolen her life. And they're living it better than she ever did.</p>
             <p>Mira Devlin was supposed to be a ghost—erased, forgotten, hidden in the cracks of a world run by machines. But when she sees her double on a screen—smiling, thriving, living the life she abandoned—Mira realizes she’s been replaced.</p>
             <p>The copy is flawless. A NeuForm—an artificial human designed to be indistinguishable from the real thing. It has her memories. Her voice. Her past. And it’s backed by The Path—an all-seeing AI guiding humanity toward a perfect future.</p>

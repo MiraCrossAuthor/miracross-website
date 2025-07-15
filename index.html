@@ -95,27 +95,26 @@
                     <p class="text-slate-600 mb-8">Be the first to hear about new releases, exclusive content, and behind-the-scenes updates. No spam, ever.</p>
                     
                     <!-- This form submits to a hidden iframe to prevent the page from reloading. -->
-                    <!-- Follow the instructions in the comments below to link this to your Google Form. -->
                     <form 
                         id="signup-form"
-                        action="https://docs.google.com/forms/d/e/1FAIpQLScvi0IZz7o_YXOoAJsmnEa0AMj34ooSlsMV-pIPJsEqUGAdPw/viewform?usp=dialog"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLScvi0IZz7o_YXOoAJsmnEa0AMj34ooSlsMV-pIPJsEqUGAdPw/formResponse"
                         method="POST" 
                         target="hidden_iframe" 
                         onsubmit="submitted=true;"
                     >
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <!-- 🚨 STEP 2: REPLACE THE NAME ATTRIBUTE in the input below -->
+                            <!-- Name Field -->
                             <input 
                                 type="text" 
-                                name="entry.YOUR_NAME_FIELD_ID"
+                                name="entry.1887559183"
                                 placeholder="Your Name" 
                                 required 
                                 class="flex-grow p-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-200 w-full"
                             >
-                            <!-- 🚨 STEP 3: REPLACE THE NAME ATTRIBUTE in the input below -->
+                            <!-- Email Field -->
                             <input 
                                 type="email" 
-                                name="entry.YOUR_EMAIL_FIELD_ID"
+                                name="entry.1843439343"
                                 placeholder="Your Email Address" 
                                 required 
                                 class="flex-grow p-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-200 w-full"
@@ -127,16 +126,6 @@
                                 Subscribe
                             </button>
                         </div>
-                        <!-- 
-                            HOW TO CONNECT TO GOOGLE FORMS:
-                            1. Create a Google Form with two "Short answer" questions (e.g., for "Name" and "Email").
-                            2. While viewing your live form (not the editor), right-click on the page and select "View Page Source".
-                            3. Search (Ctrl+F or Cmd+F) for "<form". You will find a line that looks like: <form action="https://docs.google.com/forms/d/e/LONG_STRING/formResponse" ...>
-                               - Copy that full https://... URL and paste it into the `action` attribute of the <form> tag above. (🚨 STEP 1)
-                            4. Search for your question text (e.g., "Name"). Nearby, you'll find an <input> tag with a `name` attribute like "entry.1234567890".
-                               - Copy that `entry.##########` value and paste it into the `name` attribute for the corresponding input field above.
-                            5. Repeat for the "Email" field.
-                        -->
                     </form>
                 </div>
                 <div id="success-message" class="hidden">

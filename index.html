@@ -80,14 +80,14 @@
                     <h3 class="font-lora text-3xl font-bold text-gray-800 mb-2">Join the Inner Circle</h3>
                     <p class="text-gray-500 mb-8">Be the first to hear about new releases, exclusive content, and behind-the-scenes updates. No spam, ever.</p>
                     
-                    <!-- This form submits to a Google Apps Script -->
-                    <form id="signup-form" novalidate>
+                    <!-- This form submits directly to the Google Form response endpoint -->
+                    <form id="signup-form">
                         <div class="flex flex-col sm:flex-row gap-4">
                             <!-- Name Field -->
                             <input 
                                 id="name-input"
                                 type="text" 
-                                name="name"
+                                name="entry.747036290" 
                                 placeholder="Your Name" 
                                 required 
                                 class="flex-grow p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-200 w-full"
@@ -96,7 +96,7 @@
                             <input 
                                 id="email-input"
                                 type="email" 
-                                name="email"
+                                name="entry.4090153" 
                                 placeholder="Your Email Address" 
                                 required 
                                 class="flex-grow p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-200 w-full"
@@ -159,20 +159,20 @@
 
     </div>
 
-    <!-- JavaScript to handle form submission via Google Apps Script (Final Robust Method) -->
+    <!-- JavaScript to handle form submission to Google Forms -->
     <script>
         const signupForm = document.getElementById('signup-form');
         const submitButton = document.getElementById('submit-button');
         
-        // The URL for the Google Apps Script Web App
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz2KcIPMEF0MIKot9ojbFSxhX7j-VXsoSfxkj_byqsuwhNw4wGxIpk7avIFAC1KxAlS/exec';
+        // The URL for the Google Form submission endpoint
+        const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLScvi0IZz7o_YXOoAJsmnEa0AMj34ooSlsMV-pIPJsEqUGAdPw/formResponse';
 
         signupForm.addEventListener('submit', e => {
             e.preventDefault();
             submitButton.disabled = true;
             submitButton.textContent = 'Submitting...';
 
-            fetch(scriptURL, { 
+            fetch(formURL, { 
                 method: 'POST',
                 mode: 'no-cors', // This prevents the browser from throwing a CORS error
                 body: new FormData(signupForm)
@@ -180,7 +180,7 @@
             .finally(() => {
                 // This block runs whether the request succeeds or fails.
                 // Since we use 'no-cors', we can't know the actual result, so we optimistically show success.
-                // The user should check their Google Sheet to confirm the data arrived.
+                // The data should appear in the Google Sheet.
                 document.getElementById('signup-content').style.display = 'none';
                 document.getElementById('success-message').classList.remove('hidden');
             });

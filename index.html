@@ -1,119 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mira Cross | Author</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #f5f5f5;
-      color: #222;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.2rem;
-      color: #111;
-    }
-    h2 {
-      color: #444;
-      font-size: 1.2rem;
-      font-weight: normal;
-      margin-bottom: 2rem;
-      font-style: italic;
-      text-align: center;
-    }
-    h3 {
-      color: #111;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      text-align: left;
-    }
-    section {
-      max-width: 800px;
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-    .bio {
-      text-align: center;
-    }
-    .project {
-      background-color: #ffffff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    .cover {
-      flex: 1 1 240px;
-      max-width: 300px;
-    }
-    .cover img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-    .teaser {
-      flex: 2 1 300px;
-      color: #333;
-    }
-    .teaser strong {
-      color: #000;
-    }
-    .contact {
-      text-align: center;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    em {
-      color: #555;
-      font-style: italic;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mira Cross | Author</title>
+    
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Use Inter as the primary font and Lora for a literary feel where needed */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased">
 
-  <h1>Mira Cross</h1>
-  <h2>Where code is the weapon and reality is the target.</h2>
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8">
 
-  <section class="bio">
-    <p>Mira Cross writes speculative thrillers about the blurred line between machine logic and human instinct. <em>Ghost in the Algorithm</em> is her debut novel.</p>
-  </section>
+        <!-- Header Section -->
+        <header class="text-center my-8 md:my-12">
+            <h1 class="font-lora text-5xl md:text-6xl font-bold text-slate-900">Mira Cross</h1>
+            <h2 class="mt-2 text-lg md:text-xl text-slate-500 font-light italic">
+                Where code is the weapon and reality is the target.
+            </h2>
+        </header>
 
-  <section class="project">
-    <div class="cover">
-      <img src="Front Cover.png" alt="Ghost in the Algorithm Book Cover" />
+        <!-- Social Media Links -->
+        <section class="flex justify-center items-center space-x-6 mb-12">
+            <!-- Instagram -->
+            <a href="#" title="Instagram" class="text-slate-500 hover:text-pink-600 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" title="Facebook" class="text-slate-500 hover:text-blue-600 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <!-- Goodreads -->
+            <a href="#" title="Goodreads" class="text-slate-500 hover:text-yellow-900 transition-colors duration-300">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.72,2.05c-0.12,0-0.24,0-0.36,0h-0.01C12.23,2.05,12.11,2.05,12,2.05C6.06,2.05,1.22,6.71,1.22,12.44c0,5.2,4.6,9.58,10.78,9.58c0.12,0,0.23,0,0.35,0V22c-0.12,0-0.23,0-0.35,0c-5.41,0-9.78-4.2-9.78-8.56c0-4.44,4.37-8.39,9.78-8.39c0.12,0,0.23,0,0.35,0v-0.01C12.48,5.04,12.6,5.04,12.72,5.04c2.73,0,5.2,1.36,6.69,3.83l1.23-0.74C19.06,5.2,16.03,2.05,12.72,2.05z M22.78,9.45v12.5h-2.97V9.45H22.78z M19.81,8.21c0-0.84-0.68-1.52-1.52-1.52s-1.52,0.68-1.52,1.52c0,0.84,0.68,1.52,1.52,1.52S19.81,9.05,19.81,8.21z"></path></svg>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section class="text-center max-w-2xl mx-auto mb-16">
+            <p class="text-lg text-slate-700 leading-relaxed">
+                Mira Cross writes speculative thrillers about the blurred line between machine logic and human instinct. <em>Ghost in the Algorithm</em> is her debut novel.
+            </p>
+        </section>
+        
+        <!-- Featured Project Section -->
+        <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg ring-1 ring-slate-900/5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                
+                <!-- Book Cover -->
+                <div class="md:col-span-1">
+                    <img 
+                        src="https://placehold.co/600x900/1a202c/ffffff?text=Ghost+in+the\nAlgorithm" 
+                        alt="Ghost in the Algorithm Book Cover" 
+                        class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x900/cccccc/ffffff?text=Image+Not+Found';"
+                    />
+                </div>
+                
+                <!-- Book Teaser / Description -->
+                <div class="md:col-span-2">
+                    <h3 class="font-lora text-3xl font-bold text-slate-900 mb-1">Coming Soon: <em class="font-italic">Ghost in the Algorithm</em></h3>
+                    <p class="text-lg font-semibold text-sky-600 mb-4">The Path controls the future. And she's not in it.</p>
+                    
+                    <div class="space-y-3 text-slate-600 leading-relaxed">
+                        <p>Someone has stolen her life. And they're living it better than she ever did.</p>
+                        <p>Mira Devlin was supposed to be a ghost—erased, forgotten, hidden in the cracks of a world run by machines. But when she sees her double on a screen—smiling, thriving, living the life she abandoned—Mira realizes she’s been replaced.</p>
+                        <p>The copy is flawless. A NeuForm—an artificial human designed to be indistinguishable from the real thing. It has her memories. Her voice. Her past. And it’s backed by The Path—an all-seeing AI guiding humanity toward a perfect future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mailing List Signup Section -->
+        <section id="mailing-list" class="bg-slate-100 my-16 py-12 px-6 rounded-2xl ring-1 ring-slate-200">
+            <div class="max-w-xl mx-auto text-center">
+                <div id="signup-content">
+                    <h3 class="font-lora text-3xl font-bold text-slate-900 mb-2">Join the Inner Circle</h3>
+                    <p class="text-slate-600 mb-8">Be the first to hear about new releases, exclusive content, and behind-the-scenes updates. No spam, ever.</p>
+                    
+                    <!-- This form submits to a hidden iframe to prevent the page from reloading. -->
+                    <!-- Follow the instructions in the comments below to link this to your Google Form. -->
+                    <!-- 🚨 STEP 1: REPLACE THIS URL -->
+                    <form 
+                        id="signup-form"
+                        action="YOUR_GOOGLE_FORM_ACTION_URL"
+                        method="POST" 
+                        target="hidden_iframe" 
+                        onsubmit="submitted=true;"
+                    >
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <!-- 🚨 STEP 2: REPLACE THE NAME ATTRIBUTE BELOW -->
+                            <input 
+                                type="text" 
+                                name="entry.YOUR_NAME_FIELD_ID"
+                                placeholder="Your Name" 
+                                required 
+                                class="flex-grow p-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-200 w-full"
+                            >
+                            <!-- 🚨 STEP 3: REPLACE THE NAME ATTRIBUTE BELOW -->
+                            <input 
+                                type="email" 
+                                name="entry.YOUR_EMAIL_FIELD_ID"
+                                placeholder="Your Email Address" 
+                                required 
+                                class="flex-grow p-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-200 w-full"
+                            >
+                            <button 
+                                type="submit" 
+                                class="bg-sky-600 text-white font-bold py-3 px-6 rounded-md hover:bg-sky-700 transition-colors duration-300 shadow"
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                        <!-- 
+                            HOW TO CONNECT TO GOOGLE FORMS:
+                            1. Create a Google Form with two "Short answer" questions (e.g., for "Name" and "Email").
+                            2. While viewing your live form (not the editor), right-click on the page and select "View Page Source".
+                            3. Search (Ctrl+F or Cmd+F) for "<form". You will find a line that looks like: <form action="https://docs.google.com/forms/d/e/LONG_STRING/formResponse" ...>
+                               - Copy that full https://... URL and paste it into the `action` attribute of the <form> tag above.
+                            4. Search for your question text (e.g., "Name"). Nearby, you'll find an <input> tag with a `name` attribute like "entry.1234567890".
+                               - Copy that `entry.##########` value and paste it into the `name` attribute for the corresponding input field above.
+                            5. Repeat for the "Email" field.
+                        -->
+                    </form>
+                </div>
+                <div id="success-message" class="hidden">
+                     <h3 class="font-lora text-3xl font-bold text-green-600 mb-2">Thank You!</h3>
+                     <p class="text-slate-600">You've been added to the list. Keep an eye on your inbox for updates.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact Section -->
+        <footer class="text-center mt-16 pb-8">
+            <p class="text-slate-500">
+                Get in touch: 
+                <a href="mailto:authormira.cross@gmail.com" class="font-medium text-sky-600 hover:text-sky-700 hover:underline underline-offset-4 transition-colors">
+                    authormira.cross@gmail.com
+                </a>
+            </p>
+            <p class="text-sm text-slate-400 mt-4">© 2024 Mira Cross. All Rights Reserved.</p>
+        </footer>
+
     </div>
-    <div class="teaser">
-      <h3>Coming Soon: <em>Ghost in the Algorithm</em></h3>
-      <p><strong>The Path controls the future. And she's not in it.</strong></p>
-      <p>Someone has stolen her life. And they're living it better than she ever did.</p>
-      <p>Mira Devlin was supposed to be a ghost—erased, forgotten, hidden in the cracks of a world run by machines. But when she sees her double on a screen—smiling, thriving, living the life she abandoned—Mira realizes she’s been replaced.</p>
-      <p>The copy is flawless. A NeuForm—an artificial human designed to be indistinguishable from the real thing. It has her memories. Her voice. Her past. And it’s backed by The Path—an all-seeing AI guiding humanity toward a perfect future.</p>
-    </div>
-  </section>
 
-  <section class="contact">
-    <p>📬 Contact: <a href="mailto:authormira.cross@gmail.com">authormira.cross@gmail.com</a></p>
-  </section>
+    <!-- Script to handle form submission state. Placed before the iframe to ensure 'submitted' is defined. -->
+    <script>
+        var submitted = false;
+    </script>
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('signup-content').style.display = 'none'; document.getElementById('success-message').classList.remove('hidden'); }"></iframe>
 
 </body>
 </html>
